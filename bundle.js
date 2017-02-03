@@ -70,7 +70,7 @@
 /* 0 */
 /***/ (function(module, exports) {
 
-document.write("Welcome to Webpack Fundamentals");
+document.write("Welcome to Webpack Fundamentals!!");
 
 console.log('app loaded'); 
 
