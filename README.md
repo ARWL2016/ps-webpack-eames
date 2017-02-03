@@ -7,6 +7,6 @@ https://github.com/ARWL2016/ps-webpack-eames
 - Joe Eames  
 
 **Technology** 
-1. webpack (-g)
+1. webpack (-g)  
 2. webpack-dev-server (-g) - with hot reloading 
 
