@@ -70,5 +70,16 @@ Between babel v.5 and v.6, there were two important changes:
 6. export the superset module - reason unclear  
 7. CL: `webpack --config webpack-production.config.js -p` - this will run webpack using the new config file and minify (-p)  
 8. Nb. To test in the browser, we cannot use `web-dev-server` since this will rerun the bundler with the `webpack.config`. So, install `http-server` globally and run that instead. 
- 
+
+---
+####Creating a Realistic Folder Structure  
+1. In `index.html` the script src is set to `"/public/assets/js/bundle.js"`. This folder will be referenced in the browser as the location of bundle.js. But it WILL NOT be created in the project folder. It will exist virtually at runtime when web-dev-server is run. 
+2. webpack.config: require the node `path` module. This module provides utilities for working with paths: https://nodejs.org/api/path.html#path_path  
+3. Set `context: path.resolve('js')`. This creates the context (or root) for the entry points. So webpack will search for our entry files in `js` instead of the root.  
+4. Set the `output.path` to `path.resolve('build/js')`. This is the location of the output build ONLY WHEN we run `webpack`. The local path.     
+5. Set `output.publicPath` to `/public/assets/js/`. This is the path when served in the browser, or on the public web server. This is the path that `index.html` looks for in the browser.   
+6. Set `devServer.contentBase: 'public'`. This provides the context for `index.html`  
+7. Summary: the `context` and `contentBase` properties describe the location of the entry  files and index.html. The `output.path` property describes the build location and the `output.publicPath` describes the location of the build on the webserver. When a request comes to the public path, webpack will search in the local path.   
+8. See https://webpack.github.io/docs/configuration.html for more details.   
+
 

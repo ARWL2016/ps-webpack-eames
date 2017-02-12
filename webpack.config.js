@@ -1,9 +1,16 @@
-//This is a commonJS module
+var path = require('path'); 
 
 module.exports = {
+    context: path.resolve('js'), 
     entry: ["./utils.js", "./app.js"], 
     output: {
+        path: path.resolve('build/js'),
+        publicPath: '/public/assets/js/', 
         filename: "bundle.js"
+    }, 
+
+    devServer: {
+        contentBase: 'public'
     }, 
     watch: false, 
 
