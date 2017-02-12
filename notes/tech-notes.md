@@ -2,6 +2,7 @@
 - Install webpack globally to use CLI
 - Basic build defines source and target files: `webpack ./app.js bundle.js`  
 - This is equivalent to defining entry and output in webpack config.
+
 ---
 ####Watch mode  
 - CLI: `webpack --watch`   
@@ -30,6 +31,7 @@
 Between babel v.5 and v.6, there were two important changes:   
 - `.babelrc` file required  
 - `babel-presets-2015` module become separate from `babel-core`  
+
 ---
 ####Adding an ES6 file to the bundle with Babel
 *npm install babel-core, babel-loader, and babel-preset-es2015*   
@@ -52,14 +54,12 @@ Between babel v.5 and v.6, there were two important changes:
 2. Normally we don't do this in development. In a professional system, this would be handled by a **Continuous Integration (CI) Server**  
 
 ---
-
 ####Using JSHint  
 1. `npm install jshint jshint-loader --save-dev`  
 2. add a `.jshintrc` file to the root with an empty `{}` - reason unclear    
 3. configure `webpack.config` under `module` and `rules`to configure the loader. Use `enforce: 'pre'`  
 
 --- 
-
 ####Creating a Production Config and Using Strip-Loader
 0. Strip loader is a package which strips out code needed in development but not production, such as console.log statements  
 1. `npm install strip-loader --save-dev`  
