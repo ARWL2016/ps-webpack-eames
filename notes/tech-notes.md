@@ -32,7 +32,7 @@ Run `webpack-dev-server --inline` (hot loading from `localhost:8080` - browser d
  
 
 ####Mulitple entry points  
-The basic mechanism for bundling is the module system. Webpack reads this to create the bundle. Files not required in the module system can be added in `webpack.config` as multiple entry points. This is good for third-party modules and plugins.
+The basic mechanism for bundling is the module system. Webpack reads this to create the bundle. Files not required in the module system can be added in `webpack.config` as multiple entry points. This is good for third-party modules and plugins.  
 ---
 
 ####Babel Changes  
