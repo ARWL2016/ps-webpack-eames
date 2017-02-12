@@ -9,7 +9,8 @@ https://github.com/ARWL2016/ps-webpack-eames
 **Packages**   
 1. webpack (-g)  
 2. webpack-dev-server (-g) - with hot reloading   
-3. babel 
-4. jshint 
-5. strip-loader
+3. babel, babel loader and babel-preset-2015  
+4. jshint and jshint-loader  
+5. strip-loader  
+6. http-server (-g) 
 
