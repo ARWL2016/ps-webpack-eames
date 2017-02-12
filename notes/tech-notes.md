@@ -3,18 +3,17 @@
 - Basic build defines source and target files: `webpack ./app.js bundle.js`  
 - This is equivalent to defining entry and output in webpack config.
 
-####Watch mode
-CLI: `webpack --watch` 
-Or set `watch: true` and CLI `webpack` 
+####Watch mode  
+CLI: `webpack --watch`   
+Alternative: `watch: true` and CLI `webpack` 
 ---
 
-####Webpack Development Server (with hot-loading)
-`npm install webpack-dev-server -g` 
-Run: `webpack-dev-server`
-View: `localhost:8080/webpack-dev-server/` in webpack iframe
+####Webpack Development Server (with hot-loading)  
+1. `npm install webpack-dev-server -g`   
+2. Run `webpack-dev-server`  
+3. View: `localhost:8080/webpack-dev-server/` in webpack iframe
+4. Alternatively: `webpack-dev-server --inline` (hot loading from `localhost:8080` - browser defaults to serve index.html)  
 
-Run `webpack-dev-server --inline` (hot loading from `localhost:8080` - browser defaults to serve index.html)
----
 
 ####Environment  
 - Changes to the `webpack.config.js` file require restarting the dev-server
