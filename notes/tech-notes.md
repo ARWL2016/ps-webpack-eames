@@ -5,12 +5,12 @@ Basic build defines source and target files:
 `webpack ./app.js bundle.js`
 
 This is equivalent to webpack config: 
-    `module.exports = {
-        entry: "./app.js", 
-        output: {
-            filename: "bundle.js"
-        }
-    }`
+    `module.exports = {`
+        `entry: "./app.js",` 
+        `output: {`
+            `filename: "bundle.js"`
+        `}`
+    `}`
 ---
 
 ####Watch mode
