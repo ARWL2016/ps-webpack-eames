@@ -1,17 +1,7 @@
 ####Basics  
-Install webpack globally to use CLI
-
-Basic build defines source and target files: 
-`webpack ./app.js bundle.js`
-
-This is equivalent to webpack config: 
-    `module.exports = {`
-        `entry: "./app.js",` 
-        `output: {`
-            `filename: "bundle.js"`
-        `}`
-    `}`
----
+- Install webpack globally to use CLI
+- Basic build defines source and target files: `webpack ./app.js bundle.js`  
+- This is equivalent to defining entry and output in webpack config.
 
 ####Watch mode
 CLI: `webpack --watch` 
