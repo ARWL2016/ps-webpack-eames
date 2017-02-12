@@ -5,6 +5,7 @@ https://github.com/ARWL2016/ps-webpack-eames
 
 - Pluralsight  
 - Joe Eames  
+- Aug 2015  
 
 **Packages**   
 1. webpack (-g)  
@@ -12,5 +13,5 @@ https://github.com/ARWL2016/ps-webpack-eames
 3. babel, babel loader and babel-preset-2015  
 4. jshint and jshint-loader  
 5. strip-loader  
-6. http-server (-g) 
+6. http-server (-g)   
 
