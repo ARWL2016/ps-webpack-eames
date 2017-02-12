@@ -4,7 +4,7 @@
   "description": "https://app.pluralsight.com/player?course=webpack-fundamentals&author=joe-eames&name=webpack-fundamentals-m1&clip=3&mode=live   \r https://github.com/ARWL2016/ps-webpack-eames",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
     "jshint": "^2.9.4",
     "jshint-loader": "^0.8.3",
     "node-libs-browser": "^2.0.0",
+    "strip-loader": "^0.1.2",
     "webpack": "^2.2.1"
   }
 }

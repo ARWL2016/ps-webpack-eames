@@ -6,7 +6,10 @@ https://github.com/ARWL2016/ps-webpack-eames
 - Pluralsight  
 - Joe Eames  
 
-**Technology**   
+**Packages**   
 1. webpack (-g)  
 2. webpack-dev-server (-g) - with hot reloading   
+3. babel 
+4. jshint 
+5. strip-loader
 
