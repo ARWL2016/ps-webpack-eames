@@ -1,3 +1,5 @@
-document.write("Welcome to Webpack Fundamentals!!");
+require('./login'); 
+
+document.write("Welcome to Webpack Fundamentals!!!!!");
 
 console.log('app loaded'); 

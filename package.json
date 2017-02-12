@@ -1,0 +1,28 @@
+{
+  "name": "ps-webpack-eames",
+  "version": "1.0.0",
+  "description": "https://app.pluralsight.com/player?course=webpack-fundamentals&author=joe-eames&name=webpack-fundamentals-m1&clip=3&mode=live   \r https://github.com/ARWL2016/ps-webpack-eames",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ARWL2016/ps-webpack-eames.git"
+  },
+  "author": "Alistair Willis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ARWL2016/ps-webpack-eames/issues"
+  },
+  "homepage": "https://github.com/ARWL2016/ps-webpack-eames#readme",
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.22.0",
+    "jshint": "^2.9.4",
+    "jshint-loader": "^0.8.3",
+    "node-libs-browser": "^2.0.0",
+    "webpack": "^2.2.1"
+  }
+}

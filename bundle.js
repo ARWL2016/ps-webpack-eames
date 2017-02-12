@@ -63,16 +63,50 @@
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-document.write("Welcome to Webpack Fundamentals!!");
+__webpack_require__(2); 
+
+document.write("Welcome to Webpack Fundamentals!!!!!");
 
 console.log('app loaded'); 
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+// Global JS provided to all apps and files
+console.log('utils loaded'); 
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+console.log('login loaded');
+
+var login = function login(username, password) {
+  if (username !== 'admin' || password !== 'radical') {
+    console.log('incorrect login');
+  }
+};
+
+login('admin', 'wrongpw');
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1);
+module.exports = __webpack_require__(0);
+
 
 /***/ })
 /******/ ]);
