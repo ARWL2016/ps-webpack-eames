@@ -4,9 +4,9 @@
 - This is equivalent to defining entry and output in webpack config.
 
 ####Watch mode  
-CLI: `webpack --watch`   
-Alternative: `watch: true` and CLI `webpack` 
----
+- CLI: `webpack --watch`   
+- Alternative: `watch: true` and CLI `webpack` 
+
 
 ####Webpack Development Server (with hot-loading)  
 1. `npm install webpack-dev-server -g`   
@@ -21,8 +21,10 @@ Alternative: `watch: true` and CLI `webpack`
  
 
 ####Mulitple entry points  
-The basic mechanism for bundling is the module system. Webpack reads this to create the bundle. Files not required in the module system can be added in `webpack.config` as multiple entry points. This is good for third-party modules and plugins.  
----
+- The basic mechanism for bundling is the module system. Webpack reads this to create the bundle. 
+- Files not required in the module system can be added in `webpack.config` as multiple entry points. 
+- This is good for third-party modules and plugins.  
+
 
 ####Babel Changes  
 Between babel v.5 and v.6, there were two important changes:   
@@ -59,7 +61,7 @@ Between babel v.5 and v.6, there were two important changes:
 --- 
 
 ####Creating a Production Config and Using Strip-Loader
-Strip loader is a package which strips out code needed in development but not production, such as console.log statements  
+0. Strip loader is a package which strips out code needed in development but not production, such as console.log statements  
 1. `npm install strip-loader --save-dev`  
 2. Create a `webpack-production.config.js` file. This will import the default `webpack.config` and add to it, creating a superset.  
 3. require strip-loader and webpack.config  
