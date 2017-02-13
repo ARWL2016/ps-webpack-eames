@@ -17,4 +17,4 @@ https://github.com/ARWL2016/ps-webpack-eames
 5. strip-loader  
 6. http-server (-g)   
 
-See [notes] (/notes/tech-notes.md) 
+See the detailed [documentation] (/notes/tech-notes.md) for this course.  
