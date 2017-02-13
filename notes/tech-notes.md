@@ -91,7 +91,8 @@ Between babel v.5 and v.6, there were two important changes:
 ---
 ####Creating Multiple Bundles  
 *This section configures webpack to create separate bundles. In the example, we have three separate html files each with their own js file. Webpack injects a lot of functionality into a bundle which we do not want to duplicate. Therefore, we create a shared.js file to contain these functions. In this scenario, there is no modular bundling.*  
-*This can be used for lazy-loading, only loading files as needed. In this example, the js bundles are only loaded when the link is clicked to the associated html file.*   
+*This can be used for lazy-loading, only loading files as needed. In this example, the js bundles are only loaded when the link is clicked to the associated html file. It is also useful for multiple webpages.*  
+
 1. In each html file, create a link to `shared.js` and then a link to its own `js` file. 
 2. In `webpack.config` require webpack, and then:     
 3. `var commonPlugin = new webpack.CommonsChunkPlugin('shared');` This function creates the shared file. Nb. in the course, he uses 'shared.js' but this seems to output 'shared.js.js' and breaks.  
