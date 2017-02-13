@@ -1,0 +1,3 @@
+`webpack -d` generate source map  
+`webpack -p` create a minified bundle 
+`webpack --config webpack.config.js` run webpack with a specified config file  

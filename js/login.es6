@@ -6,4 +6,6 @@ let login = (username, password) => {
   }
 }; 
 
-login('admin', 'wrongpw' ); 
+// login('admin', 'wrongpw' ); 
+
+export {login}

@@ -39,7 +39,13 @@ Between babel v.5 and v.6, there were two important changes:
 2. configure the `babel-loader` in the `webpack.config` file, under the property `module`: a) `test: /\.es6$/` regex to define file extension that will load b) `exclude: /node_modules/` c) `loader: "babel-loader"`  
 3. Loaders is an array and each loader is configured in an object 
 4. Use the `resolve` property to manage file extensions. By default, webpack will search for files with a `.js` extension. So we do not need to add this in module imports. Using `resolve`, we remove the defaults and add `.js` and `.es6`. *The first position defines a null extension (in the course). However, this no longer seems to be necessary.* 
-5. run webpack and restart server      
+5. run webpack and restart server   
+
+####Supporting ES6 Modules 
+1. change file extensions to es6  
+2. use import and export statements  
+3. remove file extensions from `entry` in `webpack.config.js`. The `resolve` property will enable webpack to find the es6 modules.
+4. To export a single function, use the shorthand `export {function}`   
 
 ---
 ####Webpack 2 Changes (IMPORTANT)  
@@ -82,4 +88,15 @@ Between babel v.5 and v.6, there were two important changes:
 7. Summary: the `context` and `contentBase` properties describe the location of the entry  files and index.html. The `output.path` property describes the build location and the `output.publicPath` describes the location of the build on the webserver. When a request comes to the public path, webpack will search in the local path.   
 8. See https://webpack.github.io/docs/configuration.html for more details.   
 
+---
+####Creating Multiple Bundles  
+*This section configures webpack to create separate bundles. In the example, we have three separate html files each with their own js file. Webpack injects a lot of functionality into a bundle which we do not want to duplicate. Therefore, we create a shared.js file to contain these functions. In this scenario, there is no modular bundling.*  
+*This can be used for lazy-loading, only loading files as needed. In this example, the js bundles are only loaded when the link is clicked to the associated html file.*   
+1. In each html file, create a link to `shared.js` and then a link to its own `js` file. 
+2. In `webpack.config` require webpack, and then:     
+3. `var commonPlugin = new webpack.CommonsChunkPlugin('shared');` This function creates the shared file. Nb. in the course, he uses 'shared.js' but this seems to output 'shared.js.js' and breaks.  
+4. Redefine our entry points from an array to an object. List each js file under an appropriate property name  
+5. redefine `output.filename`  to `"[name].js"` This will output js files with the name from (4). 
+6. set plugins: `[commonsPlugin]` - this is the shared file  
+7. If we run `webpack`, it will now output all the built files to the path specified in `output.path`. As before, if we run `webpack-dev-server` these bundles will be created virtually
 
