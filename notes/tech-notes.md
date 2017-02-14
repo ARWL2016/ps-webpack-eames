@@ -14,6 +14,7 @@
 2. Run `webpack-dev-server`  
 3. View: `localhost:8080/webpack-dev-server/` in webpack iframe
 4. Alternatively: `webpack-dev-server --inline` (hot loading from `localhost:8080` - browser defaults to serve index.html)  
+5. Nb. Using the webpack iframe adds a lot of clutter to the network - DevTools are easier to use without it   
 
 ---
 ####Environment  
